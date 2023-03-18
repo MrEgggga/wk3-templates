@@ -22,18 +22,18 @@
 }
 
 .nightMode.card {
-	background-image: url("")
+	background-image: url("");
 }
 
 .nightMode #button {
 	background-color: var(--button-color-dark);
 }
 
-.mobile .notclicked:hover {
+.mobile .notclicked#button:hover {
 	background-color: var(--button-color-dark);
 }
 
-.mobile .clicked:hover {
+.mobile .clicked#button:hover {
 	background-color: var(--button-color-dark);
 }
 
@@ -72,7 +72,7 @@
 	--font-color-dark: #333333;
 	--font-color-light: white;
 	--hint-color: #555555;
-	--meaning-color: #999999;
+	--meaning-color: #777777;
 	--meaning-sub-color: #616161;
 	--shadow-color: darkgray;
 	--kanji-color: #f100a1;
@@ -92,14 +92,13 @@
 	--button-color-hover: #BDBDBD;
 }
 
-
 .card {
 	font-family: "Open Sans";
 	font-size: 20px;
 	text-align: center;
 	color: black;
 	margin: 10px;
-	background-image: url(_back.png)
+	background-image: url(_back.png);
 }
 
 .card-front {
@@ -188,9 +187,7 @@ vocabulary {
 
 #meanings {
 	font-size: 14px;
-	line-height: 0.9;
-	color: gray;
-	color: var(--meaning-color);
+	line-height: 0.5;
 }
 
 .explanation {
@@ -222,7 +219,8 @@ vocabulary {
 
 #vocabulary-reading {
 	font-size: 18px;
-	color: gray;
+	font-family: "Hiragino Kaku Gothic Pro W3";
+	color: var(--meaning-color);
 }
 
 #reading-container {
@@ -234,7 +232,8 @@ vocabulary {
 #kanji-readings {
 	font-size: 16px;
 	line-height: 2;
-	meaning-color
+	font-family: "Hiragino Kaku Gothic Pro W3";
+	color: var(--meaning-color);
 }
 
 #context-patterns {
@@ -257,18 +256,19 @@ ja {
 	margin: 0px 0px 4px 0px;
 	text-align: left;
 	font-size: 14px;
+	background: none;
 	border-radius: 6px 0px 0px 6px;
 	border: none;
 	width: max(140px);
 }
 
-.notclicked {
+.notclicked#button {
 	font-family: "Hiragino Kaku Gothic Pro W3";
 	background-color: var(--button-color-light);
 	transition-duration: 0.2s;
 }
 
-.clicked {
+.clicked#button {
 	font-family: "Hiragino Kaku Gothic Pro W3";
 	color: var(--font-color-light);
 	background-color: var(--button-color-dark);
@@ -276,11 +276,11 @@ ja {
 	clip-path: polygon(100% 100%, 100% 85%, 90% 50%, 100% 15%, 100% 0, 0 0, 0 100%);
 }
 
-.notclicked:hover {
+.notclicked#button:hover {
 	background-color: var(--button-color-hover);
 }
 
-.clicked:hover {
+.clicked#button:hover {
 	background-color: var(--button-color-hover);
 }
 
@@ -336,14 +336,14 @@ radical-combination {
 	box-shadow: 0px 2px var(--radical-color-dark);
 	padding: 5px 8px;
 	margin: 0px 12px 0px -0px;
-	border-radius: 4px;	
+	border-radius: 4px;
 }
 
 #combination {
 	font-size: 20px;
 	display: flex;
 	align-items: center;
-	margin: 20px 0px -10px 0px;
+	margin-bottom: 20px;
 }
 
 .combination-plus {
@@ -406,14 +406,14 @@ radical-combination {
 	color: var(--font-color-light);
 }
 
-.replay-button svg { 
+.replay-button svg {
 	display:none;
 }
 
-.replay-button:before { 
+.replay-button:before {
 	content: '▶';
 	font-size: 18px;
-	color: gray;
+	color: var(--meaning-color);
 }
 
 @font-face {
@@ -540,6 +540,12 @@ radical-combination {
 	font-size: 27px;
 	border-radius: 3px;
 	margin: 0 10px 10px 0;
+}
+.mobile #level {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 18px;
 }
 
 /* Keisei */
