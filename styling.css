@@ -541,7 +541,7 @@ radical-combination {
 	border-radius: 3px;
 	margin: 0 10px 10px 0;
 }
-#level.mobile {
+.mobile #level {
 	width: 32px;
 	height: 32px;
 	line-height: 32px;
@@ -555,6 +555,9 @@ radical-combination {
 #correct reading {
 	font-size: 20px;
 	font-family: "Hiragino Kaku Gothic Pro W3";
+}
+.mobile #correct reading {
+	font-size: 24px;
 }
 
 /* Reverse card */
