@@ -152,35 +152,35 @@ vocabulary {
 }
 
 .meaning {
-	background-image: linear-gradient(to bottom, #efefef, #e0e0e0);
+	background-color: #ddd;
 	box-shadow: 0px 1px 5px 0px var(--shadow-color);
 	color: var(--font-color-dark);
 	line-height: 40px;
 }
 
 .reading {
-	background-image: linear-gradient(to bottom, #323232, #000000);
+	background-color: #0c0c0c;
 	color: var(--font-color-light);
 	line-height: 40px;
 }
 
 .radical {
 	font-family: "Hiragino Kaku Gothic Pro W3";
-	font-size: 100px;
+	font-size: min(20vw, 30vh);
 	color: var(--font-color-light);
 	background-color: var(--radical-color);
 }
 
 .kanji {
 	font-family: "Hiragino Kaku Gothic Pro W3";
-	font-size: 100px;
+	font-size: min(20vw, 30vh);
 	color: var(--font-color-light);
 	background-color: var(--kanji-color);
 }
 
 .vocabulary {
 	font-family: "Hiragino Kaku Gothic Pro W3";
-	font-size: 100px;
+	font-size: min(10vw, 15vh);
 	color: var(--font-color-light);
 	background-color: var(--vocab-color);
 }
@@ -385,15 +385,15 @@ radical-combination {
 }
 
 #typeans {
-	box-shadow: 0px 2px 3px 0px var(--shadow-color);
+	/* box-shadow: 0px 2px 3px 0px var(--shadow-color); */
 	line-height: 40px;
 	text-align: center;
-	height: 40px;
+	height: 37px;
 	border: 0;
 	outline-style: none;
 	font-family: arial;
 	font-size: 20px;
-	margin-top: 5px;
+	/* margin-top: 5px; */
 }
 
 .correct {
@@ -546,4 +546,103 @@ radical-combination {
 	height: 32px;
 	line-height: 32px;
 	font-size: 18px;
+}
+
+/* Correct Answers */
+#correct {
+	font-size: 16px;
+}
+#correct reading {
+	font-size: 20px;
+	font-family: "Hiragino Kaku Gothic Pro W3";
+}
+.mobile #correct reading {
+	font-size: 18px;
+}
+
+/* Reverse card */
+characters {
+	font-family: "Hiragino Kaku Gothic Pro W3";
+	color: var(--font-color-light);
+	margin-left: 2px;
+	border-radius: 4px;
+}
+characters.correct-kanji {
+	font-size: 25px;
+	padding: 5px 8px 5px 8px;
+	background-color: var(--kanji-color);
+	box-shadow: 0px 2px var(--kanji-color-dark);
+}
+characters.correct-vocab {
+	font-size: 25px;
+	padding: 5px 8px 5px 8px;
+	background-color: var(--vocab-color);
+	box-shadow: 0px 2px var(--vocab-color-dark);
+}
+.charheader {
+	font-family: "Ubuntu";
+	font-size: 7vw;
+	padding: 5vw;
+}
+
+/* Keisei */
+#section-phonetic-semantic {
+    margin: 10px 0px 0px 0px;
+}
+#phonetic-semantic-container {
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 650px) {
+    #phonetic-semantic-container {
+        flex-direction: column;
+    }
+    #phonetic-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+#phonetic-container {
+    display: flex;
+    align-items: start;
+    margin-right: 20px;
+}
+#compound-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+}
+#phonetic-character {
+    font-family: "Hiragino Kaku Gothic Pro W3";
+    font-size: 72px;
+    color: var(--font-color-light);
+    background-image: linear-gradient(to bottom, #0c4, #092);
+    border-top:1px solid #0c4;
+    border-bottom:1px solid #092;
+    border-left:1px solid #0c4;
+    text-align: center;
+    padding: 0px 20px 10px 20px;
+    text-shadow: 0px 1px #008030;
+    overflow: hidden;
+}
+#radical-character {
+    font-family: "Hiragino Kaku Gothic Pro W3";
+    font-size: 72px;
+    color: var(--font-color-light);
+    background-image: linear-gradient(to bottom, #0af, #0093dd);
+    border-top:1px solid #88d7ff;
+    border-bottom:1px solid #069;
+    border-left:1px solid #88d7ff;
+    text-align: center;
+    padding: 0px 20px 10px 20px;
+    text-shadow: 0px 1px var(--radical-color-dark);
+    overflow: hidden;
+}
+.mobile #phonetic-character {
+    padding: 0px 15px 10px 15px;
+    font-size: 58px;
+}
+.mobile #radical-character {
+    padding: 0px 15px 10px 15px;
+    font-size: 58px;
 }

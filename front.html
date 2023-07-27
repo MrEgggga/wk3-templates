@@ -6,7 +6,7 @@
 
 <!-- Level indicator -->
 <script>
-var level = `{{Tags}}`.match(/Lesson_(\d+)/)[1];
+var level = `{{Tags}}`.match(/lv::(\d+)/)[1];
 document.getElementById("level").innerHTML = level;
 </script>
 
@@ -45,6 +45,10 @@ if ("{{Card}}" === "Meaning") {
 	questionNameDiv.classList.add("meaning");
 } else if ("{{Card}}" === "Reading") {
 	questionNameDiv.classList.add("reading");
+} else if ("{{Card}}" === "Characters") {
+	questionNameDiv.classList.add("reading");
+    questionDisplayDiv.classList.add("charheader");
+	questionDisplayDiv.innerHTML = `{{Meaning}}`.split(",")[0];
 }
 </script>
 {{/Reading_Whitelist}}
