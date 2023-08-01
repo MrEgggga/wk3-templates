@@ -15,7 +15,7 @@ document.getElementById("level").innerHTML = level;
 <script>
 var answerDiv = document.getElementById("typeans");
 if (answerDiv !== null) {
-	answerDiv.setAttribute("placeholder", "Your Response");
+	answerDiv.setAttribute("placeholder", "Enter " + `{{Card}}`);
 	if (`{{Card}}` !== "Meaning") {
 		wanakana.bind(answerDiv);
 		answerDiv.style.fontFamily = "Hiragino Kaku Gothic Pro W3";
@@ -39,6 +39,9 @@ if ("{{Card_Type}}" == "Radical") {
 	questionDisplayDiv.classList.add("kanji");
 } else if ("{{Card_Type}}" == "Vocabulary") {
 	questionDisplayDiv.classList.add("vocabulary");
+} else if ("{{Card_Type}}" == "Kana_Vocabulary") {
+	questionDisplayDiv.classList.add("kana-vocabulary");
+	questionNameDiv.innerHTML = "Vocabulary <b>" + questionName + "</b>";
 }
 
 if ("{{Card}}" === "Meaning") {
